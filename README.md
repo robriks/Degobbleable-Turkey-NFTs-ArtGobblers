@@ -32,6 +32,18 @@ This process is very user-friendly as it happens automatically when an Art Gobbl
 
 As previously mentioned, cooking + deCooking is the only way that Turkeys can be minted. This effectively prevents rapid supply inflation, because cloned turkeys cannot be gobbled. This is enforced in a simple manner: tokenIds for cloned turkey NFTs are pushed beyond the ArtGobblerSupply. This is achieved additively by using a 10000 multiplier, causing every subsequent clone to have a tokenId 10000 higher than the last (ie Degobbleable Turkey #1's clones will have tokenId #10001, #20001, #30001 etc.)
 
+## Working with this repo
+
+To compile, run:
+
+```forge build```
+
+To run the Turkey NFT tests with plenty of verbose output from the test file:
+
+```forge test --match-contract TurkeyTest -vvvv```
+
+Feel free to mess around with the contracts!
+
 ## Open to suggestions!
 
 If you have ideas about how to make this game more interesting, let me know! A limited time window element for gobbling/degobbling or other additional mechanic could be engaging. Ways to incorporate Goo, Pages, or Legendary Gobblers are also ideas with potential. Feel free to reach out on GitHub or Twitter with ideas. :)
