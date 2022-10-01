@@ -29,7 +29,7 @@ contract Turkeys is ERC721 {
 
     constructor(ArtGobblers _artGobblers) ERC721("Gobbleable Turkeys", "TURKEY") {
         artGobblers = _artGobblers;
-        baseURI = "Hello";
+        baseURI = "ar://";
     }
 
     // @notice Overrides the SolMate transferFrom() function to slightly modify it, 
@@ -123,10 +123,10 @@ contract Turkeys is ERC721 {
     // @param baseURI is set in the constructor
     function tokenURI(uint256 turkeyId) public view override returns (string memory) {
         if (!turkeys[turkeyId].isGobbled) {
-            return string.concat(baseURI, "Mars!");
+            return string.concat(baseURI, "W25jr3l_t-P9yM7xlwwE1EHxkyv2wgkUHMErMJX3qQs");
         }
         if (turkeys[turkeyId].isGobbled) {
-            return string.concat(baseURI, "World!");
+            return string.concat(baseURI, "W25jr3l_t-P9yM7xlwwE1EHxkyv2wgkUHMErMJX3qQs");
         }
     }
 
